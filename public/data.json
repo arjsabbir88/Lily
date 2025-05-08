@@ -1,0 +1,234 @@
+[
+    {
+      "id": 1,
+      "name": "Smart Home Box",
+      "thumbnail": "https://i.ibb.co.com/fVjQ1ZJd/modern-living-room-with-smart-home-technology.jpg",
+      "banner": [
+        "https://i.ibb.co.com/fVjQ1ZJd/modern-living-room-with-smart-home-technology.jpg",
+        "https://i.ibb.co.com/GvPttdPK/young-woman-using-home-technology.jpg",
+        "https://i.ibb.co.com/Zz2fJG3F/composition-tablet-with-home-automation-app.jpg"
+      ],
+      "frequency": "Yearly",
+      "price": 199.99,
+      "description": "Transform your home into a smart home with curated smart devices, home automation products, and IoT gadgets.",
+      "tech_category": "Smart Home",
+      "features": [
+        "Smart Home Devices",
+        "Home Automation Tools",
+        "Cutting-edge IoT Gadgets"
+      ],
+      "subscription_benefits": [
+        "Discount on Future Smart Home Purchases",
+        "Exclusive Smart Home Tutorials",
+        "Early Access to Product Releases"
+      ],
+      "ratings": 4.8,
+      "number_of_reviews": 315
+    },
+    {
+      "id": 2,
+      "name": "Snack Lover Box",
+      "thumbnail": "https://i.ibb.co.com/d4zPw3k9/top-view-various-tasty-dishes.jpg",
+      "banner": [
+        "https://i.ibb.co.com/d4zPw3k9/top-view-various-tasty-dishes.jpg",
+        "https://i.ibb.co.com/Hpbc9c54/various-snacks-beer-table-top-view.jpg",
+        "https://i.ibb.co.com/cKd7734M/homemade-hamburger-burger-with-fresh-vegetables-cheese-lettuce-mayonnaise-served-french-fries-pieces.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 9.99,
+      "description": "A surprise snack box with unique and tasty treats from around the world.",
+      "tech_category": "Food & Lifestyle",
+      "features": [
+        "International Snacks",
+        "Sweet and Savory Mix",
+        "Vegan-Friendly Options"
+      ],
+      "subscription_benefits": [
+        "Free Shipping",
+        "Exclusive Snacks Only for Members",
+        "Loyalty Reward Points"
+      ],
+      "ratings": 4.6,
+      "number_of_reviews": 428
+    },
+    {
+      "id": 3,
+      "name": "Book Lover's Box",
+      "thumbnail": "https://i.ibb.co.com/cKgTng8f/open-book-with-fairytale-scene.jpg",
+      "banner": [
+        "https://i.ibb.co.com/cKgTng8f/open-book-with-fairytale-scene.jpg",
+        "https://i.ibb.co.com/1J8hvpMP/book-library-with-open-textbook.jpg",
+        "https://i.ibb.co.com/vvV6YLbW/book-composition-with-open-book.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 14.99,
+      "description": "Get a new handpicked book each month along with themed goodies.",
+      "tech_category": "Literature",
+      "features": [
+        "Curated Books",
+        "Bookmarks & Bookish Gifts",
+        "Author Notes"
+      ],
+      "subscription_benefits": [
+        "Early Access to New Releases",
+        "Community Access for Readers",
+        "Book Club Invites"
+      ],
+      "ratings": 4.7,
+      "number_of_reviews": 289
+    },
+    {
+      "id": 4,
+      "name": "Mini Plant Wellness Box",
+      "thumbnail": "https://i.ibb.co.com/Kz7dkxjQ/front-view-potted-plant-wooden-surface.jpg",
+      "banner": [
+        "https://i.ibb.co.com/Kz7dkxjQ/front-view-potted-plant-wooden-surface.jpg",
+        "https://i.ibb.co.com/vvV3SsHF/green-leaf-bokeh-with-beautiful-soft-sunlight.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 12.99,
+      "description": "Add calm to your space with a mini plant and wellness accessories.",
+      "tech_category": "Lifestyle",
+      "features": [
+        "Mini Indoor Plants",
+        "Ceramic Pot & Soil",
+        "Care Instructions"
+      ],
+      "subscription_benefits": [
+        "Free Plant Replacement",
+        "Tips from Gardening Experts",
+        "Access to Wellness Webinars"
+      ],
+      "ratings": 4.5,
+      "number_of_reviews": 210
+    },
+    {
+      "id": 5,
+      "name": "Tech Gadget Box",
+      "thumbnail": "https://i.ibb.co.com/rKLpm8ZH/modern-stationary-collection-arrangement.jpg",
+      "banner": [
+        "https://i.ibb.co.com/rKLpm8ZH/modern-stationary-collection-arrangement.jpg",
+        "https://i.ibb.co.com/mCcYxQGf/pexels-dr-failov-2151930529-3193563.jpg",
+        "https://i.ibb.co.com/zVsrBkJh/pexels-michelangelo-buonarroti-8728380.jpg"
+      ],
+      "frequency": "Quarterly",
+      "price": 49.99,
+      "description": "Discover the latest in portable tech, charging accessories, and tools.",
+      "tech_category": "Gadgets",
+      "features": [
+        "New Tech Items",
+        "Chargers and Cables",
+        "Exclusive Brand Deals"
+      ],
+      "subscription_benefits": [
+        "Tech Support Hotline",
+        "Unboxing Live Events",
+        "Discount on Partner Brands"
+      ],
+      "ratings": 4.3,
+      "number_of_reviews": 187
+    },
+    {
+      "id": 6,
+      "name": "Fitness Fuel Box",
+      "thumbnail": "https://i.ibb.co.com/QFr23CbN/pexels-scottwebb-136404.jpg",
+      "banner": [
+        "https://i.ibb.co.com/QFr23CbN/pexels-scottwebb-136404.jpg",
+        "https://i.ibb.co.com/27zFNhsk/pexels-victorfreitas-841131.jpg",
+        "https://i.ibb.co.com/KxhSGm5f/pexels-leonardho-1552252.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 24.99,
+      "description": "Healthy snacks, protein bars, and supplements for active lifestyles.",
+      "tech_category": "Health",
+      "features": [
+        "Protein Snacks",
+        "Hydration Boosters",
+        "Pre/Post Workout Supplements"
+      ],
+      "subscription_benefits": [
+        "Free Fitness App Access",
+        "Nutrition Guide",
+        "Trainer Q&A Sessions"
+      ],
+      "ratings": 4.4,
+      "number_of_reviews": 133
+    },
+    {
+      "id": 7,
+      "name": "Movie Night Box",
+      "thumbnail": "https://i.ibb.co.com/HpT6DxC2/pexels-cottonbro-4009409.jpg",
+      "banner": [
+        "https://i.ibb.co.com/HpT6DxC2/pexels-cottonbro-4009409.jpg",
+        "https://i.ibb.co.com/KzVZY9CW/pexels-pavel-danilyuk-7234229.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 19.99,
+      "description": "Everything you need for a cozy movie night, including snacks and digital codes.",
+      "tech_category": "Entertainment",
+      "features": [
+        "Popcorn & Snacks",
+        "Movie Code / DVD",
+        "Trivia Cards"
+      ],
+      "subscription_benefits": [
+        "Exclusive Movie Picks",
+        "Discounted Streaming Codes",
+        "Free Popcorn Coupons"
+      ],
+      "ratings": 4.6,
+      "number_of_reviews": 245
+    },
+    {
+      "id": 8,
+      "name": "Art Therapy Box",
+      "thumbnail": "https://i.ibb.co.com/JR4D3P47/pexels-mccutcheon-1209843.jpg",
+      "banner": [
+        "https://i.ibb.co.com/JR4D3P47/pexels-mccutcheon-1209843.jpg",
+        "https://i.ibb.co.com/whnmG1bP/pexels-daiangan-102127.jpg"
+        ],
+      "frequency": "Monthly",
+      "price": 17.99,
+      "description": "Creative projects, paints, and relaxing art kits to relieve stress.",
+      "tech_category": "Art & DIY",
+      "features": [
+        "Acrylic Colors & Canvas",
+        "Sketch & Doodle Tools",
+        "Mindfulness Booklet"
+      ],
+      "subscription_benefits": [
+        "Access to Art Classes",
+        "Community Gallery Submission",
+        "Gift Coupons for Art Shops"
+      ],
+      "ratings": 4.9,
+      "number_of_reviews": 167
+    },
+    {
+      "id": 9,
+      "name": "Coffee Discovery Box",
+      "thumbnail": "https://i.ibb.co.com/gLrXXrhh/pexels-chevanon-302899.jpg",
+      "banner": [
+        "https://i.ibb.co.com/gLrXXrhh/pexels-chevanon-302899.jpg",
+        "https://i.ibb.co.com/fVP6sw5G/pexels-pixabay-414628.jpg",
+        "https://i.ibb.co.com/zVVZ1zMc/pexels-juanpphotoandvideo-894695.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 15.49,
+      "description": "Freshly roasted beans from different regions every month.",
+      "tech_category": "Food & Beverage",
+      "features": [
+        "Single-origin Beans",
+        "Brew Guides",
+        "Tasting Notes"
+      ],
+      "subscription_benefits": [
+        "Coffee Cupping Events",
+        "Free Grinder Trial",
+        "Early Access to New Roasts"
+      ],
+      "ratings": 4.7,
+      "number_of_reviews": 198
+    }
+  ]
+  

@@ -1,0 +1,43 @@
+.mySwiper {
+    width: 100%;
+    height: 400px; /* আপনার পছন্দ অনুযায়ী উচ্চতা সেট করুন */
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+  
+  .autoplay-progress svg circle {
+    stroke-dasharray: 125;
+    stroke-dashoffset: calc(125 * var(--progress));
+    stroke: #000;
+    fill: none;
+    stroke-width: 4;
+  }

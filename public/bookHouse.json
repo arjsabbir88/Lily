@@ -1,0 +1,232 @@
+[
+    {
+      "id": 1,
+      "name": "Fiction Book",
+      "thumbnail": "https://i.ibb.co.com/20XhRPDL/pexels-cottonbro-6344231.jpg",
+      "banner": [
+        "https://i.ibb.co.com/20XhRPDL/pexels-cottonbro-6344231.jpg",
+        "https://i.ibb.co.com/ZphbGBf1/faction-1.jpg",
+        "https://i.ibb.co.com/8n8vJrLq/faction-2.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 29.99,
+      "description": "Immerse yourself in captivating stories with a curated selection of fiction novels delivered to your door.",
+      "tech_category": "Fiction",
+      "features": [
+        "Bestselling Fiction Novels",
+        "Exclusive Signed Editions",
+        "Themed Bookmarks and Goodies"
+      ],
+      "subscription_benefits": [
+        "Discount on Additional Book Purchases",
+        "Access to Fiction Book Club",
+        "Early Access to New Releases"
+      ],
+      "ratings": 4.7,
+      "number_of_reviews": 420
+    },
+    {
+      "id": 2,
+      "name": "Non-Fiction Book",
+      "thumbnail": "https://i.ibb.co.com/0p1vJKtY/pexels-kseniachernaya-3952078.jpg",
+      "banner": [
+        "https://i.ibb.co.com/0p1vJKtY/pexels-kseniachernaya-3952078.jpg",
+        "https://i.ibb.co.com/9vPqT2m/reading-non-fiction.jpg",
+        "https://i.ibb.co.com/2YkJ4pF/non-fiction-library.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 34.99,
+      "description": "Expand your knowledge with thought-provoking non-fiction books on diverse topics.",
+      "tech_category": "Non-Fiction",
+      "features": [
+        "Inspirational Non-Fiction Titles",
+        "Expert-Authored Books",
+        "Discussion Guides Included"
+      ],
+      "subscription_benefits": [
+        "Discount on Non-Fiction E-books",
+        "Exclusive Author Webinars",
+        "Priority Access to New Titles"
+      ],
+      "ratings": 4.6,
+      "number_of_reviews": 380
+    },
+    {
+      "id": 3,
+      "name": "Science Fiction Book",
+      "thumbnail": "https://i.ibb.co.com/dwPWPtmn/pexels-george-milton-7034101.jpg",
+      "banner": [
+        "https://i.ibb.co.com/dwPWPtmn/pexels-george-milton-7034101.jpg",
+        "https://i.ibb.co.com/BKG5KBSS/pexels-pixabay-256424.jpg",
+        "https://i.ibb.co.com/JwZKdKdq/pexels-george-milton-7034701.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 31.99,
+      "description": "Explore distant galaxies and futuristic worlds with our curated science fiction book collection.",
+      "tech_category": "Science Fiction",
+      "features": [
+        "Award-Winning Sci-Fi Novels",
+        "Limited Edition Covers",
+        "Sci-Fi Themed Collectibles"
+      ],
+      "subscription_benefits": [
+        "Discount on Sci-Fi Merchandise",
+        "Access to Sci-Fi Book Discussions",
+        "Early Access to Upcoming Titles"
+      ],
+      "ratings": 4.9,
+      "number_of_reviews": 450
+    },
+    {
+      "id": 4,
+      "name": "Fantasy Book",
+      "thumbnail": "https://i.ibb.co.com/JwZKdKdq/pexels-george-milton-7034701.jpg",
+      "banner": [
+        "https://i.ibb.co.com/JwZKdKdq/pexels-george-milton-7034701.jpg",
+        "https://i.ibb.co.com/s9jX1sLs/pexels-cottonbro-7610576.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 32.99,
+      "description": "Embark on magical adventures with our handpicked selection of epic fantasy novels.",
+      "tech_category": "Fantasy",
+      "features": [
+        "Epic Fantasy Novels",
+        "Exclusive Maps and Artworks",
+        "Fantasy-Themed Goodies"
+      ],
+      "subscription_benefits": [
+        "Discount on Fantasy Merch",
+        "Exclusive Fantasy Author Q&A",
+        "Early Access to New Releases"
+      ],
+      "ratings": 4.8,
+      "number_of_reviews": 410
+    },
+    {
+      "id": 5,
+      "name": "Mystery Book",
+      "thumbnail": "https://i.ibb.co.com/s9jX1sLs/pexels-cottonbro-7610576.jpg",
+      "banner": [
+        "https://i.ibb.co.com/s9jX1sLs/pexels-cottonbro-7610576.jpg",
+        "https://i.ibb.co.com/HpYRKRXg/pexels-filipe-sabino-881960-2065490.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 28.99,
+      "description": "Unravel thrilling mysteries with our curated collection of suspenseful mystery novels.",
+      "tech_category": "Mystery",
+      "features": [
+        "Gripping Mystery Novels",
+        "Clue-Based Bookmarks",
+        "Exclusive Author Notes"
+      ],
+      "subscription_benefits": [
+        "Discount on Mystery E-books",
+        "Access to Mystery Book Club",
+        "Early Access to New Titles"
+      ],
+      "ratings": 4.7,
+      "number_of_reviews": 390
+    },
+    {
+      "id": 6,
+      "name": "Biography Book",
+      "thumbnail": "https://i.ibb.co.com/Mx2V7wc5/pexels-cottonbro-4861347.jpg",
+      "banner": [
+        "https://i.ibb.co.com/Mx2V7wc5/pexels-cottonbro-4861347.jpg",
+        "https://i.ibb.co.com/CswKpk0b/pexels-rdne-8499633.jpg",
+        "https://i.ibb.co.com/CsQLZHp9/pexels-cottonbro-2925306.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 35.99,
+      "description": "Discover inspiring life stories with our curated selection of biographies and memoirs.",
+      "tech_category": "Biography",
+      "features": [
+        "Inspiring Biographies",
+        "Historical Context Guides",
+        "Exclusive Author Insights"
+      ],
+      "subscription_benefits": [
+        "Discount on Biography Audiobooks",
+        "Access to Biography Webinars",
+        "Early Access to New Releases"
+      ],
+      "ratings": 4.6,
+      "number_of_reviews": 360
+    },
+    {
+      "id": 7,
+      "name": "Self-Help Book",
+      "thumbnail": "https://i.ibb.co.com/CsQLZHp9/pexels-cottonbro-2925306.jpg",
+      "banner": [
+        "https://i.ibb.co.com/CsQLZHp9/pexels-cottonbro-2925306.jpg",
+        "https://i.ibb.co.com/CsQLZHp9/pexels-cottonbro-2925306.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 30.99,
+      "description": "Empower yourself with our curated collection of self-help and personal growth books.",
+      "tech_category": "Self-Help",
+      "features": [
+        "Motivational Self-Help Books",
+        "Actionable Workbooks",
+        "Inspirational Quote Cards"
+      ],
+      "subscription_benefits": [
+        "Discount on Self-Help Courses",
+        "Access to Personal Growth Webinars",
+        "Early Access to New Titles"
+      ],
+      "ratings": 4.5,
+      "number_of_reviews": 340
+    },
+    {
+      "id": 8,
+      "name": "History Book",
+      "thumbnail": "https://i.ibb.co.com/nNTrbDVm/pexels-tima-miroshnichenko-5951063.jpg",
+      "banner": [
+        "https://i.ibb.co.com/nNTrbDVm/pexels-tima-miroshnichenko-5951063.jpg",
+        "https://i.ibb.co.com/HTdfYxBt/pexels-leah-newhouse-50725-8050564.jpg",
+        "https://i.ibb.co.com/pBByF7Ht/pexels-dario-fernandez-ruz-7809929.jpg"
+      ],
+      "frequency": "Monthly",
+      "price": 33.99,
+      "description": "Dive into the past with our curated selection of historical books and narratives.",
+      "tech_category": "History",
+      "features": [
+        "Engaging Historical Books",
+        "Timelines and Maps",
+        "Exclusive Historian Notes"
+      ],
+      "subscription_benefits": [
+        "Discount on History Audiobooks",
+        "Access to History Discussion Groups",
+        "Early Access to New Releases"
+      ],
+      "ratings": 4.7,
+      "number_of_reviews": 370
+    },
+    {
+        "id": 9,
+        "name": "Young Adult Book Box",
+        "thumbnail": "https://i.ibb.co.com/pBByF7Ht/pexels-dario-fernandez-ruz-7809929.jpg",
+        "banner": [
+          "https://i.ibb.co.com/nNTrbDVm/pexels-tima-miroshnichenko-5951063.jpg",
+          "https://i.ibb.co.com/pBByF7Ht/pexels-dario-fernandez-ruz-7809929.jpg"
+        ],
+        "frequency": "Monthly",
+        "price": 27.99,
+        "description": "Dive into exciting adventures and heartfelt stories with our curated selection of Young Adult novels.",
+        "tech_category": "Young Adult",
+        "features": [
+          "Trending YA Novels",
+          "Exclusive Character Art Prints",
+          "YA-Themed Stickers and Goodies"
+        ],
+        "subscription_benefits": [
+          "Discount on YA Merchandise",
+          "Access to YA Book Club",
+          "Early Access to New Releases"
+        ],
+        "ratings": 4.8,
+        "number_of_reviews": 400
+      }
+  ]
