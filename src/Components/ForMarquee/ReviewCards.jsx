@@ -2,7 +2,7 @@ import React from "react";
 
 const ReviewCard = () => {
   return (
-    <div className="bg-yellow-50 rounded-2xl p-6 shadow-md border border-gray-200 max-w-md mx-10">
+    <div className="bg-yellow-50 rounded-2xl p-6 shadow-md border border-gray-200 max-w-md mx-10 shadow-xl hover:shadow-xl/30 hover:transfrom">
       <div className="mb-4 flex items-center flex-col">
         <img
           src="https://i.ibb.co.com/fdtZcvD1/pexels-rfera-432059.jpg"

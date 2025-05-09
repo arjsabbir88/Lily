@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "title": "The Silent Reader",
+      "author": "Amelia Grant",
+      "genre": "Mystery",
+      "description": "A gripping tale of a librarian who uncovers a century-old secret hidden in the pages of an ancient book.",
+      "publicationYear": 2019,
+      "subscriptionTier": "Basic",
+      "imageUrl": "https://i.ibb.co.com/4wcqxwKs/pexels-mediocrememories-2157191.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Echoes of the Cosmos",
+      "author": "Dr. Neil Harper",
+      "genre": "Science Fiction",
+      "description": "An astronaut’s journey through a wormhole reveals the truth about humanity’s place in the universe.",
+      "publicationYear": 2022,
+      "subscriptionTier": "Premium",
+      "imageUrl": "https://i.ibb.co.com/7xVKrwn0/pexels-pixabay-2156.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Whispers of the Past",
+      "author": "Lydia Moore",
+      "genre": "Historical Fiction",
+      "description": "A young woman in 18th-century Bengal discovers her family’s hidden legacy during a time of upheaval.",
+      "publicationYear": 2020,
+      "subscriptionTier": "Standard",
+      "imageUrl": "https://i.ibb.co.com/NnSPt3ky/pexels-pixabay-316080.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Code to Success",
+      "author": "Mark Evans",
+      "genre": "Self-Help",
+      "description": "A practical guide to achieving personal growth through discipline, creativity, and resilience.",
+      "publicationYear": 2023,
+      "subscriptionTier": "Basic",
+      "imageUrl": "https://i.ibb.co.com/KcFHZ1vs/pexels-muffin-1327891.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Love in Monochrome",
+      "author": "Sofia Khan",
+      "genre": "Romance",
+      "description": "Two artists find love and inspiration in a world where colors are forbidden.",
+      "publicationYear": 2021,
+      "subscriptionTier": "Premium",
+      "imageUrl": "https://i.ibb.co.com/Xx3Xf2R7/pexels-thought-catalog-317580-904616.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Poems of the Horizon",
+      "author": "Ravi Das",
+      "genre": "Poetry",
+      "description": "A collection of heartfelt poems exploring themes of nature, love, and self-discovery.",
+      "publicationYear": 2018,
+      "subscriptionTier": "Standard",
+      "imageUrl": "https://i.ibb.co.com/wZ37TdHt/pexels-ravikant-2877338.jpg"
+    }
+  ]

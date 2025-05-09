@@ -5,7 +5,7 @@ export const Cards = ({card}) => {
     const {id,name,thumbnail,description, tech_category,price,frequency}= card;
 
   return (
-    <div className="card bg-base-100 w-96 shadow-sm">
+    <div className="card bg-base-100 w-96 shadow-sm shadow-xl hover:shadow-xl/30 cursor-pointer">
   <figure>
     <img className='w-full h-[300px]'
       src={thumbnail}
