@@ -9,6 +9,7 @@
         "https://i.ibb.co.com/8n8vJrLq/faction-2.jpg"
       ],
       "frequency": "Monthly",
+      "total_number_of_book": "201",
       "price": 29.99,
       "description": "Immerse yourself in captivating stories with a curated selection of fiction novels delivered to your door.",
       "tech_category": "Fiction",
@@ -35,6 +36,7 @@
         "https://i.ibb.co.com/2YkJ4pF/non-fiction-library.jpg"
       ],
       "frequency": "Monthly",
+      "total_number_of_book": "101",
       "price": 34.99,
       "description": "Expand your knowledge with thought-provoking non-fiction books on diverse topics.",
       "tech_category": "Non-Fiction",
@@ -61,6 +63,7 @@
         "https://i.ibb.co.com/JwZKdKdq/pexels-george-milton-7034701.jpg"
       ],
       "frequency": "Monthly",
+      "total_number_of_book": "59",
       "price": 31.99,
       "description": "Explore distant galaxies and futuristic worlds with our curated science fiction book collection.",
       "tech_category": "Science Fiction",
@@ -86,6 +89,7 @@
         "https://i.ibb.co.com/s9jX1sLs/pexels-cottonbro-7610576.jpg"
       ],
       "frequency": "Monthly",
+      "total_number_of_book": "111",
       "price": 32.99,
       "description": "Embark on magical adventures with our handpicked selection of epic fantasy novels.",
       "tech_category": "Fantasy",
@@ -111,6 +115,7 @@
         "https://i.ibb.co.com/HpYRKRXg/pexels-filipe-sabino-881960-2065490.jpg"
       ],
       "frequency": "Monthly",
+      "total_number_of_book": "80",
       "price": 28.99,
       "description": "Unravel thrilling mysteries with our curated collection of suspenseful mystery novels.",
       "tech_category": "Mystery",
@@ -137,6 +142,7 @@
         "https://i.ibb.co.com/CsQLZHp9/pexels-cottonbro-2925306.jpg"
       ],
       "frequency": "Monthly",
+      "total_number_of_book": "120",
       "price": 35.99,
       "description": "Discover inspiring life stories with our curated selection of biographies and memoirs.",
       "tech_category": "Biography",
@@ -162,6 +168,7 @@
         "https://i.ibb.co.com/CsQLZHp9/pexels-cottonbro-2925306.jpg"
       ],
       "frequency": "Monthly",
+      "total_number_of_book": "401",
       "price": 30.99,
       "description": "Empower yourself with our curated collection of self-help and personal growth books.",
       "tech_category": "Self-Help",
@@ -188,6 +195,7 @@
         "https://i.ibb.co.com/pBByF7Ht/pexels-dario-fernandez-ruz-7809929.jpg"
       ],
       "frequency": "Monthly",
+      "total_number_of_book": "140",
       "price": 33.99,
       "description": "Dive into the past with our curated selection of historical books and narratives.",
       "tech_category": "History",
@@ -213,6 +221,7 @@
           "https://i.ibb.co.com/pBByF7Ht/pexels-dario-fernandez-ruz-7809929.jpg"
         ],
         "frequency": "Monthly",
+        "total_number_of_book": "172",
         "price": 27.99,
         "description": "Dive into exciting adventures and heartfelt stories with our curated selection of Young Adult novels.",
         "tech_category": "Young Adult",

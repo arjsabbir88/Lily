@@ -17,9 +17,20 @@ export const Subscription = () => {
     tech_category,
     features,
     // subscription_benefits,
+    total_number_of_book,
     ratings,
     number_of_reviews,
   } = exit;
+
+  const handleSubmitReview=()=>{
+    console.log("clicked")
+    const Container = document.getElementById("reviewContainer");
+    const textArea = document.getElementById("textArea").value;
+    const p = document.createElement("p");
+    Container.innerHTML = "";
+    p.innerText = textArea;
+    Container.appendChild(p)
+  }
 
   return (
     <>
@@ -47,6 +58,7 @@ export const Subscription = () => {
                 {tech_category}
               </h3>
             </div>
+            <h3 className="mb-5 text-green-600 text-center text-xl">Total Number of Books {total_number_of_book}</h3>
             <div>
               <p className="text-2xl font-bold text-green-400">Features:</p>
               {features.map((feature, index) => (
@@ -65,13 +77,22 @@ export const Subscription = () => {
                 Number of Reviews : {number_of_reviews}
               </p>
             </div>
+            <div className="my-6"> 
+            <textarea id="textArea" type="text" placeholder="Write Your review" className="textarea textarea-success resize-none w-8/12 text-lg"></textarea>
+            </div>
             <div className="card-actions">
-              <Link
-                to={`/view-subscription/${id}`}
+              <button onClick={handleSubmitReview}
                 className="btn bg-green-600 w-full text-xl"
               >
-                Subscriptions
-              </Link>
+                Submit Review
+              </button>
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold">Reviews</h1>
+              <div id="reviewContainer">
+                <p  className="text-xs">No Review Yet</p>
+
+              </div>
             </div>
           </div>
         </div>
