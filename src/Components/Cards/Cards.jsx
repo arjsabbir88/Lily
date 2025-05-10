@@ -8,7 +8,7 @@ export const Cards = ({card}) => {
     const {user} = use(AuthContext);
 
   return (
-    <div className="card bg-base-100 w-96 shadow-sm shadow-xl hover:shadow-xl/30 cursor-pointer">
+    <div className="card bg-base-100 w-96 shadow-xl hover:shadow-xl/30 cursor-pointer" data-aos="slide-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
   <figure>
     <img className='w-full h-[300px]'
       src={thumbnail}

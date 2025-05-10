@@ -12,6 +12,7 @@ import { Register } from "../Pages/Auth/Register";
 import { Loading } from "../Components/Loading/Loading";
 import { Error } from "../Pages/Error/Error";
 import { EditProfile } from "../Pages/Profile/EditProfile";
+import { ForgotPass } from "../Pages/ForgotPass/ForgotPass";
 
 export const Router = createBrowserRouter([
     {
@@ -76,6 +77,10 @@ export const Router = createBrowserRouter([
                 loader: ()=>fetch("/blogs.json"),
                 hydrateFallbackElement: <Loading />
 
+            },
+            {
+                path:'/forgot-Password',
+                Component: ForgotPass
             },
             {
                 path:'/edit-profile',

@@ -25,10 +25,14 @@ export const Subscription = () => {
   const handleSubmitReview=()=>{
     console.log("clicked")
     const Container = document.getElementById("reviewContainer");
+    const rating = document.getElementById("rating").value;
     const textArea = document.getElementById("textArea").value;
     const p = document.createElement("p");
+    const p2 = document.createElement("p");
     Container.innerHTML = "";
     p.innerText = textArea;
+    p2.innerText = rating;
+    Container.appendChild(p2)
     Container.appendChild(p)
   }
 
@@ -77,7 +81,10 @@ export const Subscription = () => {
                 Number of Reviews : {number_of_reviews}
               </p>
             </div>
-            <div className="my-6"> 
+            <div className="my-3"> 
+            <input id="rating" type="text" placeholder="Your rating (1-5)" className="input input-success" />
+            </div>
+            <div className="mb"> 
             <textarea id="textArea" type="text" placeholder="Write Your review" className="textarea textarea-success resize-none w-8/12 text-lg"></textarea>
             </div>
             <div className="card-actions">

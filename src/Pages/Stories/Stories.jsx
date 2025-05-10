@@ -6,7 +6,7 @@ import { ReviewCard4 } from '../../Components/ForMarquee/ReviewCard4'
 
 export const Stories = () => {
   return (
-    <div className='mx-auto grid grid-cols-2 gap-6 my-6'>
+    <div className='mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6 my-6'>
       <ReviewCard/>
       <ReviewCard2/>
       <ReviewCard3/>

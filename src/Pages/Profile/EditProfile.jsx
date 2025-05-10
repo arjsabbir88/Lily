@@ -31,9 +31,9 @@ export const EditProfile = () => {
     <form onSubmit={handleProfileInfo} className='flex justify-center item-center p-5'>
         <fieldset className='fieldset bg-base-200 border-base-300 rounded-box w-sm border p-8 '>
             <label className='label'>Name</label><br/>
-            <input type="text" name='name' placeholder="Name" className="input input-success" />
+            <input type="text" name='name' placeholder="Name" className="input input-success" required/>
             <label className="label">photoURL</label>
-            <input type="text" name="photoURL" placeholder="photoURL" className="input input-success" />
+            <input type="text" name="photoURL" placeholder="photoURL" className="input input-success" required/>
             <button type="submit" className="btn btn-soft btn-hover bg-green-600 mt-4">Submit</button>
         </fieldset>
     </form>

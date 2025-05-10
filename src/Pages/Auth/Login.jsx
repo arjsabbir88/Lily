@@ -16,6 +16,7 @@ export const Login = () => {
   }
 }, [user, navigate])
 
+
   const handleLogin=(e)=>{
     e.preventDefault();
     const email = e.target.email.value;
@@ -70,6 +71,8 @@ export const Login = () => {
   });
   }
 
+  
+
   if(loading){
     return <Loading></Loading>
   }
@@ -86,7 +89,7 @@ export const Login = () => {
         <label className="label">Password</label>
         <input type="password" name="password" className="input" placeholder="Password" required/>
         <div>
-          <a className="link link-hover my-5">Forgot Password</a>
+          <Link to="/forgot-Password" className="link link-hover my-5">Forgot Password</Link>
         </div>
 
 
