@@ -6,6 +6,9 @@ import { Profile } from "../Pages/Profile/Profile";
 import { Stories } from "../Pages/Stories/Stories";
 import { Subscription } from "../Pages/Subscription/Subscription";
 import { Blogs } from "../Pages/Blogs/Blogs";
+import { Auth } from "../Root/Auth";
+import { Login } from "../Pages/Auth/Login";
+import { Register } from "../Pages/Auth/Register";
 
 export const Router = createBrowserRouter([
     {
@@ -35,6 +38,14 @@ export const Router = createBrowserRouter([
                         blogsData: blogsData
                     }
                 }
+            },
+            {
+                path: '/auth/login',
+                Component:Login
+            },
+            {
+                path: '/auth/register',
+                Component: Register
             },
             {
                 path: '/contact',

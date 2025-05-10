@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { use } from 'react'
 import { Link } from 'react-router';
+import { AuthContext } from '../../provider/AuthProvider';
 
 export const Cards = ({card}) => {
     const {id,name,thumbnail,description, tech_category,price,frequency}= card;
+
+    const {user} = use(AuthContext);
 
   return (
     <div className="card bg-base-100 w-96 shadow-sm shadow-xl hover:shadow-xl/30 cursor-pointer">
@@ -19,7 +22,7 @@ export const Cards = ({card}) => {
         <h3 className='text-lg'>tk-{price}/{frequency}</h3>
     </div>
     <div className="card-actions">
-      <Link to={`/view-subscription/${id}`} className="btn bg-green-600 w-full text-xl">Subscriptions</Link>
+      <Link to={user?`/view-subscription/${id}`:'/auth/login'} className="btn bg-green-600 w-full text-xl">Subscriptions</Link>
     </div>
   </div>
 </div>
