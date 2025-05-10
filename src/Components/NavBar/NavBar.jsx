@@ -4,26 +4,37 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { toast } from "react-toastify";
 
 export const NavBar = () => {
-  const links = <>
+  const { user, logOut } = use(AuthContext);
+  const links = (
+    <>
       <ul className="mb-4 w-full md:flex md:ml-4">
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/profile'>Profile</NavLink></li>
-        <li><NavLink to='/stories'>Stories</NavLink></li>
-        <li><NavLink to='/Contact'>Contact</NavLink></li>
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to={user?'/profile':'/auth/login'}>Profile</NavLink>
+        </li>
+        <li>
+          <NavLink to="/stories">Stories</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Contact">Contact</NavLink>
+        </li>
       </ul>
-  </>
+    </>
+  );
 
-  const {user,logOut}=use(AuthContext)
 
-  const handleLogout=()=>{
+  const handleLogout = () => {
     console.log("clicked");
     logOut()
-    .then(()=>{
-      toast("signOut SuccessFully");
-    }).catch((error)=>{
-      console.log(error);
-    })
-  }
+      .then(() => {
+        toast("signOut SuccessFully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="navbar bg-base-100 shadow-sm mt-5">
       <div className="navbar-start">
@@ -49,43 +60,45 @@ export const NavBar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            {
-              links
-            }
+            {links}
           </ul>
         </div>
-          <Link to='/'>
-            <div className="flex items-center hover:cursor-pointer">
-              <img className="w-10"
-              src="https://i.ibb.co.com/1Y0r0wSD/Gemini-Generated-Image-gqo66ugqo66ugqo6-removebg-preview.png" alt="" />
-              <p className="ml-2 text-xl font-bold">arj<span className="text-red-600">BookHouse</span></p>
-            </div>
-          </Link>
-          {
-            user && user.name
-          }
+        <Link to="/">
+          <div className="flex items-center hover:cursor-pointer">
+            <img
+              className="w-10"
+              src="https://i.ibb.co.com/1Y0r0wSD/Gemini-Generated-Image-gqo66ugqo66ugqo6-removebg-preview.png"
+              alt=""
+            />
+            <p className="ml-2 text-xl font-bold">
+              arj<span className="text-red-600">BookHouse</span>
+            </p>
+          </div>
+        </Link>
+        {user && user.name}
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {
-            links
-          }
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        {
-          user? <div className="avatar avatar-online mx-3">
-          <div className="w-10 rounded-full hover:cursor-pointer">
-            <img src="https://img.daisyui.com/images/profile/demo/gordon@192.webp" />
+        {user ? (
+            <div className="avatar avatar-online mx-3">
+            <div className="w-10 rounded-full hover:cursor-pointer">
+              <img src={`${user.photoURL ? user.photoURL : "https://cdn-icons-png.flaticon.com/128/1177/1177568.png"}`} title={user.displayName}/>
+            </div>
           </div>
-        </div> : ""
-        }
-        {
-          user ?
-          <button onClick={handleLogout} to="/auth/login" className="btn">LogOut</button>
-          : (<Link to="/auth/login" className="btn">LogIn</Link>)
-        }
-        
+        ) : (
+          ""
+        )}
+        {user ? (
+          <button onClick={handleLogout} to="/auth/login" className="btn">
+            LogOut
+          </button>
+        ) : (
+          <Link to="/auth/login" className="btn">
+            LogIn
+          </Link>
+        )}
       </div>
     </div>
   );

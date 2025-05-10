@@ -1,26 +1,38 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { app } from '../firebase/firebase.config';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
-import { GoogleAuthProvider } from 'firebase/auth/web-extension';
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+
 
 export const AuthContext =createContext();
 const auth = getAuth(app);
-const googleProvider = new GoogleAuthProvider();
+
+const provider = new GoogleAuthProvider();
+
 export const AuthProvider = ({children}) => {
     const [user,setUser]= useState(null);
     const [loading, setLoading] = useState(true);
     console.log(user)
     const createUser =(email,password)=>{
-        return createUserWithEmailAndPassword(auth,email,password)
+        setLoading(true);
+        return createUserWithEmailAndPassword(auth,email,password).finally(()=> setLoading(false))
     }
     const logOut =()=>{
+        setLoading(true);
         return signOut(auth);
     }
     const signIn =(email,password)=>{
-        return signInWithEmailAndPassword(auth,email,password)
+        setLoading(true);
+        return signInWithEmailAndPassword(auth,email,password).finally(()=> setLoading(false))
     }
-    const signInWithGoogle = ()=>{
-        return signInWithPopup(auth,googleProvider)
+
+    const updateUser =(updateData)=>{
+        setLoading(true);
+        return updateProfile(auth.currentUser , updateData).finally(()=> setLoading(false));
+    }
+
+    const loginWithGoogle =()=>{
+        setLoading(true);
+        return signInWithPopup(auth, provider).finally(()=> setLoading(false));
     }
 
     useEffect(()=>{
@@ -43,7 +55,8 @@ export const AuthProvider = ({children}) => {
         signIn,
         loading,
         setLoading,
-        signInWithGoogle
+        updateUser,
+        loginWithGoogle
     }
-  return <AuthContext.Provider   value={authData}>{children}</AuthContext.Provider >
+  return <AuthContext value={authData}>{children}</AuthContext >
 }

@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import { Root } from "../Root/Root";
 import { Home } from "../Pages/Home/Home";
 import { Contact } from "../Pages/Contract/Contact";
@@ -9,6 +9,9 @@ import { Blogs } from "../Pages/Blogs/Blogs";
 import { Auth } from "../Root/Auth";
 import { Login } from "../Pages/Auth/Login";
 import { Register } from "../Pages/Auth/Register";
+import { Loading } from "../Components/Loading/Loading";
+import { Error } from "../Pages/Error/Error";
+import { EditProfile } from "../Pages/Profile/EditProfile";
 
 export const Router = createBrowserRouter([
     {
@@ -37,7 +40,9 @@ export const Router = createBrowserRouter([
                         bookHouseData: bookHouseData,
                         blogsData: blogsData
                     }
-                }
+                    
+                },
+                hydrateFallbackElement: <Loading />
             },
             {
                 path: '/auth/login',
@@ -62,13 +67,27 @@ export const Router = createBrowserRouter([
             {
                 path:'/view-subscription/:id',
                 Component: Subscription,
-                loader: ()=>fetch("/bookHouse.json")
+                loader: ()=>fetch("/bookHouse.json"),
+                hydrateFallbackElement: <Loading />
             },
             {
                 path: '/blogs',
                 Component: Blogs,
-                loader: ()=>fetch("/blogs.json")
+                loader: ()=>fetch("/blogs.json"),
+                hydrateFallbackElement: <Loading />
 
+            },
+            {
+                path:'/edit-profile',
+                Component: EditProfile
+            },
+            {
+                path:'/*',
+                element: <Navigate to="/error" replace />
+            },
+            {
+                path: '/error',
+                Component: Error
             }
         ]
     }

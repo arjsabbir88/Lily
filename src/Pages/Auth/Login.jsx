@@ -1,15 +1,20 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../provider/AuthProvider";
 import { toast } from "react-toastify";
 import { Loading } from "../../Components/Loading/Loading";
+import { GoogleAuthProvider } from "firebase/auth";
 
 export const Login = () => {
-  const {signIn,signInWithGoogle}= useContext(AuthContext);
+  const {user,signIn,loginWithGoogle,loading}= useContext(AuthContext);
   const navigate = useNavigate();
   const [error,setError]= useState();
 
-
+  useEffect(() => {
+  if (user) {
+    navigate('/', { replace: true });
+  }
+}, [user, navigate])
 
   const handleLogin=(e)=>{
     e.preventDefault();
@@ -35,64 +40,39 @@ export const Login = () => {
 
   }
 
-  // const handleGoogleLogin = () => {
-  //   setError('');
+  const handleGoogleLogin=()=>{
+    console.log("clicked")
+    loginWithGoogle()
+    .then(()=>{
+      toast.success("LogIn SuccessFully");
+      navigate('/')
+    }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    if(errorCode){
+      return toast.error("Handle Errors here.",errorCode)
+    }
+    const errorMessage = error.message;
+    if(errorMessage){
+      return toast.error("Handle Errors here.",errorMessage)
+    }
+    // The email of the user's account used.
+    const email = error.customData.email;
+    if(email){
+      return toast.error("Already have an account with this email")
+    }
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    if(credential){
+      return toast.error("AuthCredential handle error")
+    }
+    // ...
+  });
+  }
 
-  //   signInWithGoogle()
-  //     .then((result) => {
-  //       const user = result.user;
-  //       console.log(user);
-  //       toast.success('Google LogIn Successfully');
-  //       navigate('/');
-  //     })
-  //     .catch((error) => {
-  //       const errorCode = error.code;
-  //       const errorMessage = error.message;
-  //       let userFriendlyMessage = errorMessage;
-  //       if (errorCode === 'auth/popup-closed-by-user') {
-  //         userFriendlyMessage = 'Google login was cancelled';
-  //       } else if (errorCode === 'auth/account-exists-with-different-credential') {
-  //         userFriendlyMessage = 'Account exists with a different credential';
-  //       }
-  //       setError(userFriendlyMessage);
-  //       toast.error(userFriendlyMessage);
-  //       console.log(errorCode, errorMessage);
-  //     });
-  // };
-
-  const handleGoogleLogin = () => {
-    setError(''); // Clear any existing error
-  
-    signInWithGoogle()
-      .then((result) => {
-        const user = result.user;
-        console.log('Logged in user:', user);
-        toast.success('Google login successful!');
-        navigate('/');
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.error('Google login error:', errorCode, errorMessage);
-  
-        let userFriendlyMessage;
-  
-        switch (errorCode) {
-          case 'auth/popup-closed-by-user':
-            userFriendlyMessage = 'Google login was cancelled by the user.';
-            break;
-          case 'auth/account-exists-with-different-credential':
-            userFriendlyMessage = 'An account already exists with a different credential.';
-            break;
-          default:
-            userFriendlyMessage = 'Something went wrong. Please try again.';
-        }
-  
-        setError(userFriendlyMessage);
-        toast.error(userFriendlyMessage);
-      });
-  };
-  
+  if(loading){
+    return <Loading></Loading>
+  }
 
   return (
     <form onSubmit={handleLogin} className="flex justify-center h-[100vh] w-h-screen items-center">

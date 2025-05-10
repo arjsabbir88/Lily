@@ -1,22 +1,28 @@
-import React, { use, useState,useContext} from 'react'
+import React, { useState,useContext, useEffect} from 'react'
 import { Link, useNavigate } from 'react-router'
 import { AuthContext } from '../../provider/AuthProvider'
 import { toast } from 'react-toastify'
+import { Loading } from '../../Components/Loading/Loading'
 
 export const Register = () => {
-  const {createUser,setUser}= useContext(AuthContext);
+  const {user,createUser,setUser,updateUser,loading}= useContext(AuthContext);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (user) {
+      navigate('/', { replace: true });
+    }
+  })
   const [error, setError] = useState();
   const handleSubmit=(e)=>{
     e.preventDefault()
     
     const name = e.target.name.value;
     const email = e.target.email.value;
-    const photoUrl = e.target.photoUrl.value;
+    const photoURL = e.target.photoUrl.value;
     const password = e.target.password.value;
     const secondPassword = e.target.secondPassword.value;
-    console.log(name,email,photoUrl,password,secondPassword)
+    console.log(name,email,photoURL,password,secondPassword)
 
     const hasUppercase = /[A-Z]/.test(password);
     const hasLowercase = /[a-z]/.test(password);
@@ -41,15 +47,28 @@ export const Register = () => {
     createUser(email,password)
     .then(result=>{
       const user = result.user;
-      setUser(user);
+
+      updateUser({displayName: name, photoURL: photoURL}).then(()=>{
+
+        setUser({...user, displayName: name, photoURL: photoURL});
+
+
+      }).catch((error) => {
+
+      const errorMessage = error.message;
+      setError(errorMessage);
+
+    });
       toast.success("Account Register SuccessFully");
       navigate('/')
     }).catch((error) => {
       const errorCode = error.code;
-      // const errorMessage = error.message;
       setError(errorCode);
-      // ..
     });
+  }
+
+  if(loading){
+    return <Loading></Loading>
   }
   return (
     <form onSubmit={handleSubmit} className="flex justify-center py-6 w-h-screen items-center shadow-2xl hover:Shadow-xl/30">
