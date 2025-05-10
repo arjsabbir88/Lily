@@ -33,7 +33,6 @@ export const Frequently = () => {
             Ah, that's fantastic to know! It sounds like this particular
             subscription service has a very straightforward and user-friendly
             cancellation policy:
-            <ul>
               <li>
                 Easy Cancellation: You can manage it directly through your
                 account settings, putting you in control. No Hidden
@@ -42,7 +41,6 @@ export const Frequently = () => {
                 Fees: That's a significant plus, as some services can surprise
                 you with unexpected charges upon cancellation.
               </li>
-            </ul>
           </p>
         </div>
       </div>

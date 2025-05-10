@@ -7,7 +7,6 @@ import { BlogsContainer } from '../Blogs/BlogsContainer'
 import { Frequently } from '../../Components/FrequentlyQuestion/Frequently'
 
 export const Home = () => {
-
   return (
     <div>
       <SwiperContainer/>
