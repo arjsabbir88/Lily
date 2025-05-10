@@ -4,99 +4,135 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { toast } from "react-toastify";
 import { Loading } from "../../Components/Loading/Loading";
 import { GoogleAuthProvider } from "firebase/auth";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 
 export const Login = () => {
-  const {user,signIn,loginWithGoogle,loading}= useContext(AuthContext);
+  const { user, signIn, loginWithGoogle, loading } = useContext(AuthContext);
   const navigate = useNavigate();
-  const [error,setError]= useState();
+  const [error, setError] = useState();
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
-  if (user) {
-    navigate('/', { replace: true });
-  }
-}, [user, navigate])
+    if (user) {
+      navigate("/", { replace: true });
+    }
+  }, [user, navigate]);
 
-
-  const handleLogin=(e)=>{
+  const togglePassword = () => {
+    setShowPassword((prev) => !prev);
+  };
+  const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email,password);
+    console.log(email, password);
 
-    setError('');
+    setError("");
 
-    signIn(email,password)
-    .then(()=>{
+    signIn(email, password)
+      .then(() => {
         // const user = result.user;
-      toast.success("LogIn SuccessFully");
-      navigate('/')
-    }).catch((error) => {
-      // const errorCode = error.code;
-      const errorMessage = error.message;
-      setError(errorMessage);
-      toast.error("Something Was Wrong");
+        toast.success("LogIn SuccessFully");
+        navigate("/");
+      })
+      .catch((error) => {
+        // const errorCode = error.code;
+        const errorMessage = error.message;
+        setError(errorMessage);
+        toast.error("Something Was Wrong");
 
-      // ..
-    })
+        // ..
+      });
+  };
 
-  }
-
-  const handleGoogleLogin=()=>{
-    console.log("clicked")
+  const handleGoogleLogin = () => {
+    console.log("clicked");
     loginWithGoogle()
-    .then(()=>{
-      toast.success("LogIn SuccessFully");
-      navigate('/')
-    }).catch((error) => {
-    // Handle Errors here.
-    const errorCode = error.code;
-    if(errorCode){
-      return toast.error("Handle Errors here.",errorCode)
-    }
-    const errorMessage = error.message;
-    if(errorMessage){
-      return toast.error("Handle Errors here.",errorMessage)
-    }
-    // The email of the user's account used.
-    const email = error.customData.email;
-    if(email){
-      return toast.error("Already have an account with this email")
-    }
-    // The AuthCredential type that was used.
-    const credential = GoogleAuthProvider.credentialFromError(error);
-    if(credential){
-      return toast.error("AuthCredential handle error")
-    }
-    // ...
-  });
-  }
+      .then(() => {
+        toast.success("LogIn SuccessFully");
+        navigate("/");
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        if (errorCode) {
+          return toast.error("Handle Errors here.", errorCode);
+        }
+        const errorMessage = error.message;
+        if (errorMessage) {
+          return toast.error("Handle Errors here.", errorMessage);
+        }
+        // The email of the user's account used.
+        const email = error.customData.email;
+        if (email) {
+          return toast.error("Already have an account with this email");
+        }
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        if (credential) {
+          return toast.error("AuthCredential handle error");
+        }
+        // ...
+      });
+  };
 
-  
-
-  if(loading){
-    return <Loading></Loading>
+  if (loading) {
+    return <Loading></Loading>;
   }
 
   return (
-    <form onSubmit={handleLogin} className="flex justify-center h-[100vh] w-h-screen items-center">
+    <form
+      onSubmit={handleLogin}
+      className="flex justify-center h-[100vh] w-h-screen items-center"
+    >
       <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-sm border p-8">
         {/* <legend className="">Login</legend> */}
         <p className="text-center text-xl font-bold">Login with</p>
 
         <label className="label">Email</label>
-        <input type="email" name="email" className="input" placeholder="Email" required/>
+        <input
+          type="email"
+          name="email"
+          className="input"
+          placeholder="Email"
+          required
+        />
 
         <label className="label">Password</label>
-        <input type="password" name="password" className="input" placeholder="Password" required/>
+
+        <div style={{ position: "relative", width: "100%" }}>
+          <input
+            type={showPassword ? "text" : "password"}
+            name="password"
+            className="input"
+            placeholder="Password"
+            required
+            style={{ paddingRight: "40px" }}
+          />
+          <span
+            onClick={togglePassword}
+            style={{
+              position: "absolute",
+              right: "10px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              cursor: "pointer",
+              color: "#555",
+            }}
+          >
+            {showPassword ? <IoEyeOff /> : <IoEye />}
+          </span>
+        </div>
         <div>
-          <Link to="/forgot-Password" className="link link-hover my-5">Forgot Password</Link>
+          <Link to="/forgot-Password" className="link link-hover my-5">
+            Forgot Password
+          </Link>
         </div>
 
-
-        <button type="submit" className="btn btn-neutral mt-4">Login</button>
-        {
-          error? <p className="text-red-600 text-lg">{error}</p>:''
-        }
+        <button type="submit" className="btn btn-neutral mt-4">
+          Login
+        </button>
+        {error ? <p className="text-red-600 text-lg">{error}</p> : ""}
         <p className="text-center">
           Don't have an Account{" "}
           <Link to="/auth/register" className="link hover-link text-red-500">
@@ -106,7 +142,11 @@ export const Login = () => {
 
         <h3 className="text-center text-xl my-5 font-bold">Or</h3>
 
-        <button type='button' onClick={handleGoogleLogin} className="btn bg-white text-black border-[#e5e5e5]">
+        <button
+          type="button"
+          onClick={handleGoogleLogin}
+          className="btn bg-white text-black border-[#e5e5e5]"
+        >
           <svg
             aria-label="Google logo"
             width="30"

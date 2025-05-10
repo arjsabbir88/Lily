@@ -1,4 +1,5 @@
 import React from 'react'
+import { LuMapPinMinus } from 'react-icons/lu'
 
 export const Contact = () => {
   const handleSubmit=()=>{
@@ -72,20 +73,8 @@ export const Contact = () => {
 
           {/* Address Card */}
           <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <svg
-              className="w-8 h-8 text-gray-600 mb-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M17.657 16.243l-4.243-4.243m0 0l-4.243 4.243m4.243-4.243l4.243-4.243m-4.243 4.243l-4.243-4.243M21 12A9 9 0 113 12a9 9 0 0118 0z"
-              />
-            </svg>
+            
+            <LuMapPinMinus className="w-8 h-8 text-gray-600 mb-4"/>
             <p className="text-gray-800 font-medium">
               Indira Road, Farmgate, Dhaka, <br /> Bangladesh
             </p>
