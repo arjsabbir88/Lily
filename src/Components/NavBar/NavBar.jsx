@@ -35,6 +35,33 @@ export const NavBar = () => {
         console.log(error);
       });
   };
+
+
+  const btn = <>
+    {user ? (
+          <button onClick={handleLogout} to="/auth/login" className="btn">
+            LogOut
+          </button>
+        ) : (
+          <Link to="/auth/login" className="btn">
+            LogIn
+          </Link>
+        )}
+  </>
+
+  const icon = <>
+        <div className="flex items-center hover:cursor-pointer">
+            <img
+              className="w-10"
+              src="https://i.ibb.co.com/1Y0r0wSD/Gemini-Generated-Image-gqo66ugqo66ugqo6-removebg-preview.png"
+              alt=""
+            />
+            <p className="ml-2 text-xl font-bold hidden md:flex">
+              arj<span className="text-red-600">BookHouse</span>
+            </p>
+          </div>
+  </>
+  
   return (
     <div className="navbar bg-base-100 shadow-sm mt-5">
       <div className="navbar-start">
@@ -61,18 +88,18 @@ export const NavBar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {links}
+            <div className="flex md:hidden">
+              {
+                btn
+              }
+            </div>
           </ul>
         </div>
         <Link to="/">
-          <div className="flex items-center hover:cursor-pointer">
-            <img
-              className="w-10"
-              src="https://i.ibb.co.com/1Y0r0wSD/Gemini-Generated-Image-gqo66ugqo66ugqo6-removebg-preview.png"
-              alt=""
-            />
-            <p className="ml-2 text-xl font-bold">
-              arj<span className="text-red-600">BookHouse</span>
-            </p>
+          <div className="hidden md:flex">
+            {
+            icon
+          }
           </div>
         </Link>
         {user && user.name}
@@ -90,15 +117,16 @@ export const NavBar = () => {
         ) : (
           ""
         )}
-        {user ? (
-          <button onClick={handleLogout} to="/auth/login" className="btn">
-            LogOut
-          </button>
-        ) : (
-          <Link to="/auth/login" className="btn">
-            LogIn
-          </Link>
-        )}
+        <div className="hidden md:flex">
+          {
+          btn
+        }
+        </div>
+        <div className="flex md:hidden">
+          {
+            icon
+          }
+        </div>
       </div>
     </div>
   );
