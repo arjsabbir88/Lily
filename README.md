@@ -85,7 +85,7 @@ Store all sensitive data in a `.env` file (not pushed to GitHub):
 
 ## Screenshot
 
-![Home Page](https://ibb.co/wrJgrbyL)
+<img src="https://i.ibb.co/jZVfZxh5/arjbookhouse-netlify-app.png" alt="homePage"/>
+<img src="https://i.ibb.co/xKXjQCCS/arjbookhouse-netlify-app-3.png" alt="profilePage"/>
 
-![Profile Page](https://ibb.co/j9bMF66v)
 
