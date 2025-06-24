@@ -2,7 +2,7 @@
 
 A personalized subscription box service platform built with React, Firebase, and Node.js. Users can browse, subscribe, and review different monthly box services based on their preferences.
 
-🔴 [Live Site](https://arjbookhouse.netlify.app/))  
+🔴 [Live Site](https://arjbookhouse.netlify.app/)
 🔵 [Client Repo](https://github.com/arjsabbir88/Lily)
 
 ---
