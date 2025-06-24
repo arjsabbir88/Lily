@@ -1,12 +1,90 @@
-# React + Vite
+# 🎁A BookHouse Subscription Box Service Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personalized subscription box service platform built with React, Firebase, and Node.js. Users can browse, subscribe, and review different monthly box services based on their preferences.
 
-Currently, two official plugins are available:
+🔴 [Live Site](https://arjbookhouse.netlify.app/))  
+🔵 [Client Repo](https://github.com/arjsabbir88/Lily)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🔥 Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 **Authentication**: Email/Password + Google Login via Firebase Auth.
+- 🧠 **Forget Password**: Reset password by email (without email verification).
+- 📦 **Subscription Service**: JSON-based dynamic cards and service detail pages.
+- ✅ **Protected Routes**: My Profile & Subscription Details require login.
+- 💬 **User Reviews**: Add & view reviews per subscription service.
+- ⚙️ **Update Profile**: Firebase `updateProfile()` to update name & photo.
+- 🕵️‍♂️ **Password Rules**: Uppercase, lowercase, and min 6 characters.
+- 🧭 **Dynamic Title**: Each route sets its own document title.
+- 🎯 **404 Page**: Catch-all not found route.
+- 🎨 **Responsive Design**: Fully responsive across all devices.
+- 🔄 **Persisted Login State**: Uses Firebase `onAuthStateChanged`.
+- 👁️ **Show/Hide Password**: Toggle password visibility on registration.
+- ✨ **AOS Animation**: Animates homepage cards & sections.
+- 🧪 **Extra Private Route**: Bonus route with relevant content (e.g., "My Orders").
+
+---
+
+## 📂 Project Structure
+
+BookHouse-subscription-box/
+│
+├── client/ → React app
+│ ├── components/
+│ ├── pages/
+│ ├── routes/
+│ ├── hooks/
+│ ├── App.jsx
+│ └── main.jsx
+│
+├── server/ → Node.js + Express (if applicable)
+│
+└── README.md
+
+
+## 🔐 Environment Variables
+
+Store all sensitive data in a `.env` file (not pushed to GitHub):
+
+
+
+
+---
+
+## 🧩 Tech Stack
+
+- **Frontend**: React, React Router DOM, DaisyUI, TailwindCSS
+- **Backend**: Node.js (Optional for additional features)
+- **Auth**: Firebase Authentication
+- **Hosting**: Netlify (Frontend) + Firebase (optional)
+- **Package Used**:
+- firebase
+- react-router-dom
+- aos (Animate on Scroll)
+- react-icons`
+- sweetalert2 / react-toastify (for messages)
+
+---
+
+## 📝 JSON Sample for Services
+
+```json
+{
+  "id": "1",
+  "name": "Tech Lover Box",
+  "category": "Technology",
+  "price": "$29.99",
+  "frequency": "Monthly",
+  "thumbnail": "https://i.ibb.co/your-image.jpg"
+}
+
+
+# My Project
+
+## Screenshot
+
+![Home Page](https://i.ibb.co/jZVfZxh5/arjbookhouse-netlify-app.png))
+
+![Profile Page](https://i.ibb.co/xKXjQCCS/arjbookhouse-netlify-app-3.png)
+
