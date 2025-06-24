@@ -78,6 +78,7 @@ Store all sensitive data in a `.env` file (not pushed to GitHub):
   "frequency": "Monthly",
   "thumbnail": "https://i.ibb.co/your-image.jpg"
 }
+```
 
 
 # My Project
